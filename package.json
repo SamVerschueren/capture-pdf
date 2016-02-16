@@ -1,0 +1,45 @@
+{
+  "name": "capture-pdf",
+  "version": "0.0.0",
+  "description": "Capture html in a pdf buffer",
+  "license": "MIT",
+  "repository": "SamVerschueren/capture-pdf",
+  "author": {
+    "name": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava --serial"
+  },
+  "files": [
+    "index.js",
+    "stream.js",
+    "index.html"
+  ],
+  "keywords": [
+    "capture",
+    "html",
+    "pdf",
+    "phantom",
+    "phantomjs",
+    "buffer"
+  ],
+  "dependencies": {
+    "object-assign": "^4.0.1",
+    "phantom-bridge": "^2.0.1",
+    "pinkie-promise": "^2.0.0",
+    "tempfile": "^1.1.1"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "is-pdf": "^1.0.0",
+    "pify": "^2.3.0",
+    "tempfile": "^1.1.1",
+    "textract": "^1.2.1",
+    "xo": "*"
+  }
+}
