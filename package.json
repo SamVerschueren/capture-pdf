@@ -1,6 +1,6 @@
 {
   "name": "capture-pdf",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Capture html in a pdf buffer",
   "license": "MIT",
   "repository": "SamVerschueren/capture-pdf",
