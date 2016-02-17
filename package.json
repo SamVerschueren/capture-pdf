@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "object-assign": "^4.0.1",
-    "phantom-bridge": "^2.0.1",
+    "phantom-bridge": "^1.0.0",
     "pinkie-promise": "^2.0.0",
     "tempfile": "^1.1.1"
   },
