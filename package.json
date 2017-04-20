@@ -41,8 +41,5 @@
     "tempfile": "^1.1.1",
     "textract": "^2.1.2",
     "xo": "^0.16.0"
-  },
-  "ava": {
-    "serial": true
   }
 }
