@@ -32,6 +32,8 @@ module.exports = function (url, opts) {
 		JSON.stringify(opts)
 	]);
 
+	cp.stderr.pipe(process.stdout);
+
 	return new Promise(function (resolve, reject) {
 		cp.on('error', function (err) {
 			reject(err);
