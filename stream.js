@@ -24,7 +24,7 @@ page.onError = function (err, trace) {
 	console.error('WARN: ' + err + formatTrace(trace[0]));
 };
 
-page.open(opts.url || page.libraryPath + '/index.html', function (status) {
+page.open(opts.url || 'file://' + page.libraryPath + '/index.html', function (status) {
 	if (status === 'fail') {
 		console.error('Couldn\'t load url: ' + opts.url);
 		phantom.exit(1);
