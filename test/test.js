@@ -35,7 +35,7 @@ test('write content', async t => {
 });
 
 test('write local file content', async t => {
-	const buffer = await m('fixtures/fixture.html');
+	const buffer = await m('test/fixtures/fixture.html');
 
 	t.is(await extract(buffer), 'Foo');
 });
@@ -48,13 +48,13 @@ test('write url content', async t => {
 });
 
 test('have a `css` property', async t => {
-	const buffer = await m('fixtures/fixture.html', {css: 'div:after { content: \'Bar\'; }'});
+	const buffer = await m('test/fixtures/fixture.html', {css: 'div:after { content: \'Bar\'; }'});
 
 	t.is(await extract(buffer), 'FooBar');
 });
 
 test('have a `css` file property', async t => {
-	const buffer = await m('fixtures/fixture.html', {css: 'fixtures/fixture.css'});
+	const buffer = await m('test/fixtures/fixture.html', {css: 'test/fixtures/fixture.css'});
 
 	t.is(await extract(buffer), 'FooBaz');
 });
