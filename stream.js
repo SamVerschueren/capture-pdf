@@ -1,7 +1,8 @@
 /* global phantom, document, window */
 'use strict';
-var system = require('system');
-var page = require('webpage').create();
+var system = require('system');				// eslint-disable-line import/no-extraneous-dependencies
+var page = require('webpage').create();		// eslint-disable-line import/no-extraneous-dependencies
+
 var opts = JSON.parse(system.args[1]);
 
 function formatTrace(trace) {
