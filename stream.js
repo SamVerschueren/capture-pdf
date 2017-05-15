@@ -38,7 +38,27 @@ page.open(opts.url || 'file://' + page.libraryPath + '/index.html', function (st
 		}, opts.content);
 	}
 
-	page.paperSize = opts.paperSize;
+	var paperSize = opts.paperSize || page.paperSize;
+
+	if (opts.header) {
+		paperSize.header = {
+			height: '1cm',
+			contents: phantom.callback(function (pageNum, numPages) {
+				return opts.header.replace(/{{pageNum}}/g, pageNum).replace(/{{numPages}}/g, numPages);
+			})
+		};
+	}
+
+	if (opts.footer) {
+		paperSize.footer = {
+			height: '1cm',
+			contents: phantom.callback(function (pageNum, numPages) {
+				return opts.footer.replace(/{{pageNum}}/g, pageNum).replace(/{{numPages}}/g, numPages);
+			})
+		};
+	}
+
+	page.paperSize = paperSize;
 
 	page.evaluate(function (css) {
 		var bgColor = window

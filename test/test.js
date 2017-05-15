@@ -58,3 +58,12 @@ test('have a `css` file property', async t => {
 
 	t.is(await extract(buffer), 'FooBaz');
 });
+
+test('render header and footer', async t => {
+	const buffer = await m('test/fixtures/fixture.html', {
+		header: 'Foo Bar',
+		footer: '{{pageNum}}/{{numPages}}'
+	});
+
+	t.is(await extract(buffer), 'Foo Bar 1/1 Foo');
+});
